@@ -1,0 +1,23 @@
+<div>
+	<a class="btn btn-small pull-right">Add New Service Request</a>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Status</th>
+				<th>Created</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(reqs, function(req){ %>
+				<tr>
+					<td><%= req.title %></td>
+					<td><%= req.status %></td>
+					<td><%= $.format.date(new Date(req.createdDate), "dd/MM/yyyy") %></td>
+					<td><a>View</a> | <a>Edit</a></td>
+				</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</div>

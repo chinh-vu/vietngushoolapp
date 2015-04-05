@@ -1,0 +1,49 @@
+<div>
+	<div class="row">
+		<div class="span12">
+			<form class="form-horizontal">
+				<fieldset>
+					<legend>Add New Participant</legend>
+						<div class="control-group">
+							<label class="control-label">First Name</label>
+							<div class="controls">
+								<input class="input-large" id="fname-input" type="text" placeholder="first name">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Last Name</label>
+							<div class="controls">
+								<input class="input-large" id="lname-input" type="text" placeholder="last name">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Username</label>
+							<div class="controls">
+								<input class="input-large" id="username-input" type="text" placeholder="username">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Password</label>
+							<div class="controls">
+								<input class="input-large" id="password-input" type="text" placeholder="password">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Organization</label>
+							<div class="controls">
+<!-- 								<input class="input-large" id="org-input" type="text" placeholder="password">
+ -->						<select id="org-input">
+ 									<% _.each(orgs, function(org){ %>
+    								<option value="<%= org.id %>"><%= org.name %></option>
+    							<% }); %>
+ 								</select>
+							</div>
+						</div>						<div class="form-actions">
+							<a class="btn btn-primary save-btn">Add Participant</a>
+							<a class="btn" href="/#">Cancel</a>
+						</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

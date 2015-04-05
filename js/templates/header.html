@@ -1,0 +1,62 @@
+ <div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">Vietngu MN School</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav br-topnav">
+            <li class="home-menu"><a href="#">Home</a></li>
+            <!--
+            <li class="requests-menu"><a href="/#/requests">Service Requests</a></li>
+            -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="adminission-menu"><a href="#/admision">Student Profile</a></li>
+                <li class="register-menu"><a href="#/register">Register</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grades<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="kindergarten-menu"><a href="#/participant/search">Class Kindergarten</a></li>
+                <li class="class-1A-menu"><a href="#/classes/1A">Class 1 A</a></li>
+                <li class="class-1B-menu"><a href="#/classes/1B">Class 1 B</a></li>
+                <li class="class-1C-menu"><a href="#/classes/1C">Class 1 C</a></li>
+                <li class="class-2A-menu"><a href="#/classes/2A">Class 2 A</a></li>
+                <li class="class-2B-menu"><a href="#/classes/2B">Class 2 B</a></li>
+                <li class="class-2C-menu"><a href="#/classes/2C">Class 2 C</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav pull-right br-topnav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In <b class="caret"></b></a>
+              <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                <!-- Login form here -->
+                <form action="login" method="post">
+                  <input id="user_username" style="margin-bottom: 15px;" type="text" name="username" placeholder="E-Mail Address" size="30" />
+                  <input id="user_password" style="margin-bottom: 15px;" type="password" name="password" placeholder="Password" size="30" />
+                  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+                  <label class="string optional" for="user_remember_me"> Remember me</label>
+
+                  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+                </form>
+              </div>
+            </li>
+          </ul>
+
+<!--           <form class="navbar-search pull-right">
+            <input type="text" class="search-query" placeholder="Search">
+          </form>
+ -->          
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(users, function(user){ %>
+				<tr><td><a href="/#/participant/<%= user.id %>"><%= user.firstName %> <%= user.lastName %></a></td></tr>
+			<% }); %>
+		</tbody>
+	</table>
+
+</div>
