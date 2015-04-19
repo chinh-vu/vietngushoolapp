@@ -2,10 +2,11 @@ define(
   ['marionette',
   'views/header',
   'views/home',
+  'views/footer',
   'models/user',
   'bootstrap'
   ],
-  function(marionette, Header, Home, User){
+  function(marionette, Header, Home, Footer, User){
     "use strict";
 
     var App = new marionette.Application();
@@ -22,7 +23,8 @@ define(
 
     App.addRegions({
       header : '#header',
-      main   : '#main'
+      main   : '#main',
+      footer : '#footer'
     });
 
     App.addInitializer(function(){
@@ -30,13 +32,13 @@ define(
       var viewOptions = {
         // collection : todoList
       };
-    
-      
-
 
       App.header.show(new Header(viewOptions));
       App.main.show(new Home(viewOptions));
+      App.footer.show(new Footer(viewOptions));
+
     });
 
     return App;
+
 });

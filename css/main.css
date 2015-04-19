@@ -1,0 +1,12 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.box-shadow {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid lightgray;
+  margin: 5px;
+  box-shadow: 10px 10px 5px #888888;
+}
