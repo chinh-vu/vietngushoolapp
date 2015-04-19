@@ -1,7 +1,7 @@
 define([
 	'marionette',
 	'templates',
-	'App', 'models/address', 'backbone.syphon', 'backbone.validation'
+	'app', 'models/address', 'backbone.syphon', 'backbone.validation'
 ], function (Marionette,templates, App, Address) {
   "use strict";
 

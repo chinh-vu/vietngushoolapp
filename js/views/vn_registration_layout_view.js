@@ -10,7 +10,7 @@ define([
   'collections/account_profiles',
   'models/account_profile', 
   'models/address',
-  'App'
+  'app'
 ], function ($, _, Backbone, Backgrid, Marionette,templates, RegistrationProfileAddressView,
     RegistrationProfileCommandsView, AccountProfiles, AccountProfile, Address, App) {
   "use strict";

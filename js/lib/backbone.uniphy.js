@@ -32,7 +32,7 @@
 
         trackStatus: function (userId, view) {
 
-            require(['App', 'jst'], function(App) {
+            require(['app', 'jst'], function(App) {
 
                 // var // $status = $(view.el).find('.status'), // Status div element // Can't cache the $status because we need to re-find() the status div if the view was re-rendered between status updates
                 var partial = JST['contactStatusPartial']; // Status partial template
@@ -51,7 +51,7 @@
 
         trackInformation: function (userId, view) {
 
-            require(['App', 'jst'], function(App) {
+            require(['app', 'jst'], function(App) {
 
                 if (App.contactsController.contacts.getContactByUserId(userId)) { // Make sure the user id exists just in case this is an industry news item
                     view.listenTo(App.contactsController.contacts.getContactByUserId(userId), 'change:displayName change:title', function () {
@@ -81,7 +81,7 @@
 
                 $(this.el).find('.lazy-loader').removeClass('hide');
 
-                require(['App'], function(App) {
+                require(['app'], function(App) {
 
                     $scroll.on('scroll', function () {
 

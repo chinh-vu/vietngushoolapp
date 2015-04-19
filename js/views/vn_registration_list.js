@@ -7,7 +7,7 @@ define([
 	'templates',
   'collections/addresses',
   'models/address',
-  'App'
+  'app'
 ], function ($, _, Backbone, Backgrid, Marionette,templates, Addresses, Address, App) {
      
       var columns = [

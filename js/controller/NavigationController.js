@@ -3,7 +3,7 @@ define([
     'underscore',
     'backbone',
     'marionette',
-    'App'
+    'app'
     ], 
     function ($, _, Backbone, Marionette, App, LoginObject) {
 

@@ -1,7 +1,7 @@
 define([
 	'marionette',
 	'templates',
-	'App'
+	'app'
 ], function (Marionette,templates, App) {
   "use strict";
 

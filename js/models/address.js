@@ -1,7 +1,7 @@
 define([
   'jquery',
   'underscore',
-  'backbone', 'App', 'Config'
+  'backbone', 'app', 'config'
 ], function($, _, Backbone, App, Config) {
 // var StudentProfile = Backbone.Model.extend(
   var Address = Backbone.Model.extend({

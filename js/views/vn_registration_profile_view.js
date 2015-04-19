@@ -9,7 +9,7 @@ define([
  	'views/vn_registration_profile_commands_view',
   'collections/account_profiles',
   'models/account_profile',
-  'App'
+  'app'
 ], function ($, _, Backbone, Backgrid, Marionette,templates, RegistrationProfileAddressView,
     RegistrationProfileCommandsView, AccountProfiles, AccountProfile, App) {
         var AccountProfiles = new AccountProfiles();
