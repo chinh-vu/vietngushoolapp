@@ -35,7 +35,7 @@ requirejs.config({
     'text'                : 'lib/text',
     'tpl'                 : 'lib/tpl',
     'hbs'                 : 'lib/hbs',
-    'jquery'              : 'lib/jquery',
+    'jquery'              : 'thirdparty/jquery-1.11.2',
     'jquery.dateFormat'   : 'lib/jquery.dateFormat',
     'underscore'          : 'lib/underscore-min',
     'backbone'            : 'lib/backbone-min',
@@ -47,7 +47,6 @@ requirejs.config({
     'backbone.wreqr'      : 'lib/backbone.wreqr',
     'backbone.babysitter' : 'lib/backbone.babysitter',
     'backbone.marionette.handlebars' : 'lib/backbone.marionette.handlebars',
-
     'backbone.syphon'     : 'lib/backbone.syphon', 
     'backbone.validation' : 'lib/backbone-validation',
     'backgrid'            : 'lib/backgrid',
