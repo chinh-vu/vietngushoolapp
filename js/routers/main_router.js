@@ -70,7 +70,7 @@ define([
 
     register : function(id) {
       App.header.currentView.select('register-menu');
-  
+      
       var household = new HouseHold();    
       console.log('id: ', id);
       if(id===null) {
@@ -79,18 +79,18 @@ define([
         console.log('address is: ', JSON.stringify(household));
       } else {
         household = new HouseHold({id: id});
-var defer = $.Deferred();        
-setTimeout(function(){
-household.fetch({
-  success: function(data){
-    defer.resolve(data);
-    console.log("okie ", JSON.stringify(household));
-    App.vent.trigger('account:profiles', household.get('profiles'));
-//account:profiles
-  }
-});
- }, 2000);
-defer.promise();
+        var defer = $.Deferred();        
+        setTimeout(function(){
+          household.fetch({
+            success: function(data){
+              defer.resolve(data);
+              console.log("okie ", JSON.stringify(household));
+              App.vent.trigger('account:profiles', household.get('profiles'));
+              //account:profiles
+            }
+          });
+        }, 2000);
+        defer.promise();
       }
       
       var registrationLayoutView = new RegistrationLayoutView({model:household});

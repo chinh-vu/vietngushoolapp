@@ -48,7 +48,8 @@ define([
       
     	this.getRegion('registrationCommandsRegion').show(new RegistrationProfileCommandsView());
 
-      var gradeArrays = [ ["N/A", "N/A"], [ "Kintegarteen", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
+      var gradeArray = [ ["Select One", ""], [ "Kindergarten", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
+      var memberTypeArray = [ ["Select One", ""], [ "Parent/Guardian", "true" ], [ "Student", "false"] ];
       var columns = [
           {
             name : "id",
@@ -77,45 +78,41 @@ define([
             cell : "string",
             label : "DOB"
           },
-          {
-            name : "gender",
-            cell : Backgrid.SelectCell.extend({
-              optionValues : [ [ "Male", "m" ], [ "Female", "f" ] ]
-            }),
-            label : "Gender"
-          },
-          {
-            name : "phoneNbr",
-            cell : "string",
-            label : "Phone Number"
-          },
+          // {
+          //   name : "gender",
+          //   cell : Backgrid.SelectCell.extend({
+          //     optionValues : [ [ "Male", "m" ], [ "Female", "f" ] ]
+          //   }),
+          //   label : "Gender"
+          // },
+          // {
+          //   name : "phoneNbr",
+          //   cell : "string",
+          //   label : "Phone Number"
+          // },
           {
             name : "email",
             cell : "string",
-            label : "Email",
-// label: "Active",
+            label : "Email"
           },
           {
             name : "memberType",
             cell : Backgrid.SelectCell.extend({
-              optionValues : [ [ "Parent/Guardian", true ],
-                  [ "Student", false ] ]
+              optionValues : memberTypeArray
             }),
             label : "Parent/Guardian"
           },
           {
             name : "grade",
             cell : Backgrid.SelectCell.extend({
-              optionValues : gradeArrays
+              optionValues : gradeArray
             }),
-            label : "grade",
-// label: "Active",
+            label : "Grade"
           },
           {
-            name : "paid",
+            name : "schoolYear",
             cell : "string",
-            label : "paid",
-// label: "Active",
+            label : "School Year"
           }
 
         ];
@@ -164,12 +161,11 @@ define([
       registrationProfileAddressView.listenTo(App.vent, 'registration:complete:submit', function() {
         var self = this;
 
-        console.log('------------------- Recieved event registration:complete:submit');
+        console.log('------------------- Received event registration:complete:submit');
         var data = Backbone.Syphon.serialize(self);
 
-        console.log('address ', JSON.stringify(self.model));
-
-        //console.log('set address ', JSON.stringify(self.model));
+        //console.log('address ', JSON.stringify(self.model));
+        console.log('data: ', JSON.stringify(data));
         //console.log('App.user.login', App.user.credentials.username);
         self.model.save(data, {
           silent: false,
