@@ -9,7 +9,7 @@ define([
     template : templates.tplRegistrationProfileCommands,
 		events : {
 			'click a.js-registration-complete' : 'registrationComplete',
-			'click a.js-registration-reset' : 'showProfilesInGrid'
+			'click a.js-registration-reset' : 'resetRegistrationForm'
 		},
 
 		registrationComplete : function(e) {
@@ -17,6 +17,13 @@ define([
 			e.stopPropagation();
 
 			App.vent.trigger('registration:complete:submit');
-		}    	
+		},
+
+		resetRegistrationForm : function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			window.location.reload();
+		}
 	});
 })
