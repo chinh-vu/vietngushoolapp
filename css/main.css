@@ -74,3 +74,11 @@ legend.registration-page {
 .form-horizontal .control-label {
   padding-right: 10px;
 }
+
+.backgrid input[type="text"] {
+  width: 150px;
+}
+
+.backgrid th {
+  width: 150px;
+}
