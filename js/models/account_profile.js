@@ -14,9 +14,11 @@ define([
 			lastName : '',
 			dob : '',
 			gender : '',
+			email : '',
 			memberType : '',
-			grade:'n/a',
-			paid:''
+			grade:'',
+			paid:'',
+			schoolYear:''
 		},
 
 		isValidUserProfile : function (attrs, options) {

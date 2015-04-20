@@ -49,7 +49,7 @@ define([
     	this.getRegion('registrationCommandsRegion').show(new RegistrationProfileCommandsView());
 
       var gradeArray = [ ["Select One", ""], [ "Kindergarten", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
-      var memberTypeArray = [ [ "Parent/Guardian", "true" ], [ "Student", "false"] ];
+      var memberTypeArray = [ [ "Parent/Guardian", "parent_guardian" ], [ "Student", "student"] ];
       var paidArray = [ [ "Not Paid", "notpaid" ], [ "Paid", "paid"] ];
       var paidCell = Backgrid.Extension.ObjectCell.extend({
         formatter: {
@@ -200,8 +200,13 @@ define([
         var data = Backbone.Syphon.serialize(self);
 
         //console.log('address ', JSON.stringify(self.model));
-        console.log('data: ', JSON.stringify(data));
+        //console.log('data: ', JSON.stringify(data));
         //console.log('App.user.login', App.user.credentials.username);
+
+        var _profiles = accountProfiles.toJSON();
+        data = {"householdContact": data, "profiles": _profiles};
+        console.log('data: ', JSON.stringify(data));
+
         self.model.save(data, {
           silent: false,
           sync: true,

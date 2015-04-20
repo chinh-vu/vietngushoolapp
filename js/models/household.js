@@ -13,7 +13,9 @@ define([
 		state : '',
 		zipcode : '',
 		primaryPhoneNbr : '',
-		secondaryPhoneNbr : ''
+		primaryPhoneType : '',
+		secondaryPhoneNbr : '',
+		secondaryPhoneType : ''
 
 		// ,profiles:[]
 	},
