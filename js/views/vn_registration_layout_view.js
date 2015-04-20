@@ -49,7 +49,8 @@ define([
     	this.getRegion('registrationCommandsRegion').show(new RegistrationProfileCommandsView());
 
       var gradeArray = [ ["Select One", ""], [ "Kindergarten", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
-      var memberTypeArray = [ ["Select One", ""], [ "Parent/Guardian", "true" ], [ "Student", "false"] ];
+      var memberTypeArray = [ [ "Parent/Guardian", "true" ], [ "Student", "false"] ];
+      var paidArray = [ [ "Not Paid", "notpaid" ], [ "Paid", "paid"] ];
       var columns = [
           {
             name : "id",
@@ -108,6 +109,13 @@ define([
               optionValues : gradeArray
             }),
             label : "Grade"
+          },
+          {
+            name : "paid",
+            cell : Backgrid.SelectCell.extend({
+              optionValues : paidArray
+            }),
+            label : "Paid"
           },
           {
             name : "schoolYear",
