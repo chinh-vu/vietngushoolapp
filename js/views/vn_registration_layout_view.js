@@ -51,6 +51,28 @@ define([
       var gradeArray = [ ["Select One", ""], [ "Kindergarten", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
       var memberTypeArray = [ [ "Parent/Guardian", "true" ], [ "Student", "false"] ];
       var paidArray = [ [ "Not Paid", "notpaid" ], [ "Paid", "paid"] ];
+      var paidCell = Backgrid.Extension.ObjectCell.extend({
+        formatter: {
+          fromRaw: function(object) {
+            if (object) {
+              return _.compact([
+                object.schoolFee ? "Fee: " + object.schoolFee : null,
+                object.donation ? "Donation: " + object.donation : null,
+                object.suggestedGrade ? "Sug. Grade: " + object.suggestedGrade : null,
+                object.startDate ? "Start Date: " + object.startDate : null
+              ]).join(", ");
+            } else {
+              return "Not Paid"
+            }
+          }
+        },
+        schema: [
+          {name: "schoolFee", label: "School Fee"},
+          {name: "donation", label: "Donation"},
+          {name: "suggestedGrade", label: "Sug. Grade"},
+          {name: "startDate", label: "Start Date"}
+        ]
+      });
       var columns = [
           {
             name : "id",
@@ -110,11 +132,16 @@ define([
             }),
             label : "Grade"
           },
-          {
+          /*{
             name : "paid",
             cell : Backgrid.SelectCell.extend({
               optionValues : paidArray
             }),
+            label : "Paid"
+          },*/
+          {
+            name : "paid",
+            cell : paidCell,
             label : "Paid"
           },
           {

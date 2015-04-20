@@ -38,7 +38,8 @@ legend.registration-page {
   width: 100%;
 }
 
-.form-horizontal .form-row {
+.form-horizontal .form-row,
+.form-horizontal .form-control {
   margin-bottom: 15px;
 }
 
@@ -68,4 +69,8 @@ legend.registration-page {
 
 .form-horizontal input[type="text"] {
   height: 30px;
+}
+
+.form-horizontal .control-label {
+  padding-right: 10px;
 }
