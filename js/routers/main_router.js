@@ -72,11 +72,11 @@ define([
       App.header.currentView.select('register-menu');
       
       var household = new HouseHold();    
-      console.log('id: ', id);
+      //console.log('id: ', id);
       if(id===null) {
         household = new HouseHold();
         
-        console.log('address is: ', JSON.stringify(household));
+        //console.log('address is: ', JSON.stringify(household));
       } else {
         household = new HouseHold({id: id});
         var defer = $.Deferred();        
@@ -96,7 +96,7 @@ define([
       var registrationLayoutView = new RegistrationLayoutView({model:household});
       registrationLayoutView.render();
       
-      console.log("about to show the registration page ",  JSON.stringify(household));
+      //console.log("about to show the registration page ",  JSON.stringify(household));
       App.main.show(registrationLayoutView);
     },
 

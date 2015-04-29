@@ -30,17 +30,24 @@ legend.registration-page {
 }
 
 .form-horizontal * {
-  display: inline-block;
   box-sizing: border-box;
 }
 
-.form-horizontal .form-group{
+.form-horizontal div {
+  display: inline-block;
+}
+
+.form-horizontal .form-row {
   width: 100%;
 }
 
-.form-horizontal .form-row,
 .form-horizontal .form-control {
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-horizontal .form-group {
+  vertical-align: top;
 }
 
 .form-horizontal .registration-page-addressline {
@@ -73,6 +80,47 @@ legend.registration-page {
 
 .form-horizontal .control-label {
   padding-right: 10px;
+}
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+
+.form-horizontal input + .help-block,
+.form-horizontal select + .help-block {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}
+
+.has-error .input-group-addon {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #a94442;
+}
+
+.has-error .form-control-feedback {
+  color: #a94442;
 }
 
 .backgrid input[type="text"] {

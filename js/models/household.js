@@ -35,28 +35,32 @@ define([
 			return this;
 		});
 	},
-	// validation: {
-	//     line1: {
-	//       required: true,
-	//       msg: 'Please enter a valid address'
-	//     },
-	//     city: {
-	//       required: true,
-	//       msg: 'Please enter a valid city'
-	//     },
-	//     state: {
-	//       required: true,
-	//       msg: 'Please enter a valid state'
-	//     },
-	//     zipcode: {
-	//       required: true,
-	//       msg: 'Please enter a valid zip code'
-	//     },
-	//     primaryPhoneNbr: {
-	//       required: true,
-	//       msg: 'Please enter a valid phone number'
-	//     }
-	// }
+	validation: {
+	    line1: {
+	      required: true,
+	      msg: 'Please enter a valid address'
+	    },
+	    city: {
+	      required: true,
+	      msg: 'Please enter a valid city'
+	    },
+	    state: {
+	      required: true,
+	      msg: 'Please select a valid state'
+	    },
+	    zipcode: {
+	      required: true,
+	      msg: 'Please enter a valid zip code'
+	    },
+	    primaryPhoneNbr: {
+	      required: true,
+	      msg: 'Please enter a valid phone number'
+	    },
+	    primaryPhoneType: {
+	      required: true,
+	      msg: 'Please select a valid phone type'
+	    }
+	}
 	// validate : function(attrs, options) {
 	// 	var errors = {};
 	// 	if (!attrs.line1) {

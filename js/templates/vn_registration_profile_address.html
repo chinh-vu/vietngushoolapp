@@ -6,52 +6,68 @@
 			<input class="form-control" id="houseHold" class="form-control input-sm" style="margin-bottom: 15px;" placeholder="House Hold" name="houseHold" type="text" value="<%= houseHold %>">
 		</div>
 	</div> -->
-	<div class="form-group form-group-lg">
+	<div class="form-row form-group">
 		<div class="col-sm-8">
-			<input id="line1" class="form-row registration-page-addressline" placeholder="Address Line 1" name="line1" type="text" value="<%= line1 %>">
+			<input id="line1" class="form-control registration-page-addressline" placeholder="Address Line 1" name="line1" type="text" value="<%= line1 %>">
+			<span class="help-block hidden">
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-row form-group">
 		<div class="col-sm-8">
-			<input id="line2" class="form-row registration-page-addressline" placeholder="Address Line 2" name="line2" type="text" value="<%= line2 %>">
+			<input id="line2" class="form-control registration-page-addressline" placeholder="Address Line 2" name="line2" type="text" value="<%= line2 %>">
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
-		<div class="col-sm-3">
-			<input id="city" class="form-row registration-page-city" placeholder="City" name="city" type="text" value="<%= city %>">
+	<div class="form-row">
+		<div class="form-group">
+			<div class="col-sm-3">
+				<input id="city" class="form-control registration-page-city" placeholder="City" name="city" type="text" value="<%= city %>">
+				<span class="help-block registration-page-city hidden">
+			</div>
 		</div>
 		<div class="gutter"></div>
-		<div class="col-sm-2">
-			<!-- <input id="state" class="form-row registration-page-state" placeholder="State" name="state" type="text" value="<%= state %>"> -->
-			<select class="form-row registration-page-state required" id="state" name="state"><option value="">Select State</option><option value="AL">Alabama (AL)</option><option value="AK">Alaska (AK )</option><option value="AR">Arkansas (AR)</option><option value="AZ">Arizona (AZ)</option><option value="CA">California (CA)</option><option value="CO">Colorado (CO)</option><option value="CT">Connecticut (CT)</option><option value="DE">Delaware (DE)</option><option value="DC">District of Columbia (DC)</option><option value="FL">Florida (FL)</option><option value="GA">Georgia (GA)</option><option value="HI">Hawaii (HI)</option><option value="ID">Idaho (ID)</option><option value="IL">Illinois (IL)</option><option value="IN">Indiana (IN)</option><option value="IA">Iowa (IA)</option><option value="KS">Kansas (KS)</option><option value="KY">Kentucky (KY)</option><option value="LA">Louisiana (LA)</option><option value="ME">Maine (ME)</option><option value="MD">Maryland (MD)</option><option value="MA">Massachusetts  (MA)</option><option value="MI">Michigan (MI)</option><option value="MN" selected>Minnesota (MN)</option><option value="MS">Mississippi (MS)</option><option value="MO">Missouri (MO)</option><option value="MT">Montana (MT)</option><option value="NE">Nebraska (NE)</option><option value="NV">Nevada (NV)</option><option value="NH">New Hampshire (NH)</option><option value="NJ">New Jersey (NJ)</option><option value="NM">New Mexico (NM)</option><option value="NY">New York (NY)</option><option value="NC">North Carolina (NC)</option><option value="ND">North Dakota (ND)</option><option value="OH">Ohio (OH)</option><option value="OK">Oklahoma (OK)</option><option value="OR">Oregon (OR)</option><option value="PA">Pennsylvania (PA)</option><option value="PR">Puerto Rico (PR)</option><option value="RI">Rhode Island (RI)</option><option value="SC">South Carolina (SC)</option><option value="SD">South Dakota (SD)</option><option value="TN">Tennessee (TN)</option><option value="TX">Texas (TX)</option><option value="UT">Utah (UT)</option><option value="VT">Vermont (VT)</option><option value="VA">Virginia (VA)</option><option value="WA">Washington (WA)</option><option value="WV">West Virginia (WV)</option><option value="WI">Wisconsin (WI)</option><option value="WY">Wyoming (WY)</option><option value="  ">-- US Territories --</option><option value="AS">American Samoa (AS)</option><option value="FM">Fed States of Micronesia (FM)</option><option value="GU">Guam (GU)</option><option value="MH">Marshall Islands (MH)</option><option value="MP">Northern Mariana Islands (MP)</option><option value="PW">Palau (PW)</option><option value="VI">Virgin Islands (VI)</option><option value="  ">-- US Military --</option><option value="AA">Armed Forces of the Americas (AA)</option><option value="AE">Armed Forces Europe (AE)</option><option value="AP">Armed Forces Pacific (AP)</option></select>
+		<div class="form-group">
+			<div class="col-sm-3">
+				<!-- <input id="state" class="form-row registration-page-state" placeholder="State" name="state" type="text" value="<%= state %>"> -->
+				<select class="form-control registration-page-state required" id="state" name="state"><option value="">Select State</option><option value="AL">Alabama (AL)</option><option value="AK">Alaska (AK )</option><option value="AR">Arkansas (AR)</option><option value="AZ">Arizona (AZ)</option><option value="CA">California (CA)</option><option value="CO">Colorado (CO)</option><option value="CT">Connecticut (CT)</option><option value="DE">Delaware (DE)</option><option value="DC">District of Columbia (DC)</option><option value="FL">Florida (FL)</option><option value="GA">Georgia (GA)</option><option value="HI">Hawaii (HI)</option><option value="ID">Idaho (ID)</option><option value="IL">Illinois (IL)</option><option value="IN">Indiana (IN)</option><option value="IA">Iowa (IA)</option><option value="KS">Kansas (KS)</option><option value="KY">Kentucky (KY)</option><option value="LA">Louisiana (LA)</option><option value="ME">Maine (ME)</option><option value="MD">Maryland (MD)</option><option value="MA">Massachusetts  (MA)</option><option value="MI">Michigan (MI)</option><option value="MN" selected>Minnesota (MN)</option><option value="MS">Mississippi (MS)</option><option value="MO">Missouri (MO)</option><option value="MT">Montana (MT)</option><option value="NE">Nebraska (NE)</option><option value="NV">Nevada (NV)</option><option value="NH">New Hampshire (NH)</option><option value="NJ">New Jersey (NJ)</option><option value="NM">New Mexico (NM)</option><option value="NY">New York (NY)</option><option value="NC">North Carolina (NC)</option><option value="ND">North Dakota (ND)</option><option value="OH">Ohio (OH)</option><option value="OK">Oklahoma (OK)</option><option value="OR">Oregon (OR)</option><option value="PA">Pennsylvania (PA)</option><option value="PR">Puerto Rico (PR)</option><option value="RI">Rhode Island (RI)</option><option value="SC">South Carolina (SC)</option><option value="SD">South Dakota (SD)</option><option value="TN">Tennessee (TN)</option><option value="TX">Texas (TX)</option><option value="UT">Utah (UT)</option><option value="VT">Vermont (VT)</option><option value="VA">Virginia (VA)</option><option value="WA">Washington (WA)</option><option value="WV">West Virginia (WV)</option><option value="WI">Wisconsin (WI)</option><option value="WY">Wyoming (WY)</option><option value="  ">-- US Territories --</option><option value="AS">American Samoa (AS)</option><option value="FM">Fed States of Micronesia (FM)</option><option value="GU">Guam (GU)</option><option value="MH">Marshall Islands (MH)</option><option value="MP">Northern Mariana Islands (MP)</option><option value="PW">Palau (PW)</option><option value="VI">Virgin Islands (VI)</option><option value="  ">-- US Military --</option><option value="AA">Armed Forces of the Americas (AA)</option><option value="AE">Armed Forces Europe (AE)</option><option value="AP">Armed Forces Pacific (AP)</option></select>
+				<span class="help-block registration-page-state hidden">
+			</div>
 		</div>
 		<div class="gutter"></div>
-		<div class="col-sm-3">
-			<input id="zipcode" class="form-row registration-page-zip" placeholder="Postal Code" name="zipcode" type="text" value="<%= zipcode %>">
+		<div class="form-group">
+			<div class="col-sm-3">
+				<input id="zipcode" class="form-control registration-page-zip" placeholder="Postal Code" name="zipcode" type="text" value="<%= zipcode %>">
+				<span class="help-block registration-page-zip hidden">
+			</div>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
-		<div class="col-sm-4">
-			<input id="primaryPhoneNbr" class="form-row registration-page-phone" placeholder="Primary Phone Number" name="primaryPhoneNbr" type="text" value="<%= primaryPhoneNbr %>">
+	<div class="form-row form-group-lg">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<input id="primaryPhoneNbr" class="form-control registration-page-phone" placeholder="Primary Phone Number" name="primaryPhoneNbr" type="text" value="<%= primaryPhoneNbr %>">
+				<span class="help-block registration-page-phone hidden">
+			</div>
+		</div>
+		<div class="gutter"></div>
+		<div class="form-group">
+			<div class="col-sm-4">
+				<!-- <input id="primaryPhoneType" class="form-row registration-page-phone-type" placeholder="Primary Phone Type" name="primaryPhoneType" type="text" value="<%= primaryPhoneNbr %>"> -->
+				<select class="form-control registration-page-phone-type required" id="primaryPhoneType" name="primaryPhoneType">
+					<option value="">Select One</option>
+					<option value="home_phone">Home Phone</option>
+					<option value="mobile_phone">Mobile Phone</option>
+					<option value="work_phone">Work Phone</option>
+				</select>
+				<span class="help-block registration-page-phone-type hidden">
+			</div>
 		</div>
 		<div class="gutter"></div>
 		<div class="col-sm-4">
-			<!-- <input id="primaryPhoneType" class="form-row registration-page-phone-type" placeholder="Primary Phone Type" name="primaryPhoneType" type="text" value="<%= primaryPhoneNbr %>"> -->
-			<select class="form-row registration-page-phone-type required" id="primaryPhoneType" name="primaryPhoneType">
-				<option value="">Select One</option>
-				<option value="home_phone">Home Phone</option>
-				<option value="mobile_phone">Mobile Phone</option>
-				<option value="work_phone">Work Phone</option>
-			</select>
-		</div>
-		<div class="gutter"></div>
-		<div class="col-sm-4">
-			<input id="secondaryPhoneNbr" class="form-row registration-page-phone" placeholder="Secondary Phone Number" name="secondaryPhoneNbr" type="text" value="<%= secondaryPhoneNbr %>">
+			<input id="secondaryPhoneNbr" class="form-control registration-page-phone" placeholder="Secondary Phone Number" name="secondaryPhoneNbr" type="text" value="<%= secondaryPhoneNbr %>">
 		</div>
 		<div class="gutter"></div>
 		<div class="col-sm-4">
 			<!-- <input id="secondaryPhoneType" class="form-row registration-page-phone-type" placeholder="Secondary Phone Type" name="secondaryPhoneType" type="text" value="<%= secondaryPhoneNbr %>"> -->
-			<select class="form-row registration-page-phone-type required" id="secondaryPhoneType" name="secondaryPhoneType">
+			<select class="form-control registration-page-phone-type required" id="secondaryPhoneType" name="secondaryPhoneType">
 				<option value="">Select One</option>
 				<option value="home_phone">Home Phone</option>
 				<option value="mobile_phone">Mobile Phone</option>
@@ -59,4 +75,10 @@
 			</select>
 		</div>
 	</div>
+
+    <!-- <div class="form-row hidden">
+        <div class="col-lg-offset-2 col-lg-10">
+            <button type="button" id="householdContactSubmitButton" class="btn btn-success">Submit</button>
+        </div>
+    </div> -->
 </form>

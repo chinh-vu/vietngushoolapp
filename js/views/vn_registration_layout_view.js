@@ -162,7 +162,7 @@ define([
         aProfile.set('id', aProfile.get('cid'));
         accountProfiles.add(aProfile); 
 
-        console.log('id ', JSON.stringify(aProfile));
+        //console.log('id ', JSON.stringify(aProfile));
       }
 
       var gridView = new Backgrid.Grid({
@@ -195,48 +195,56 @@ define([
       });
       registrationProfileAddressView.listenTo(App.vent, 'registration:complete:submit', function() {
         var self = this;
+        var isFormComplete = false;
 
-        console.log('------------------- Received event registration:complete:submit');
-        var data = Backbone.Syphon.serialize(self);
+        //console.log('------------------- Received event registration:complete:submit');
+        var householdContactData = Backbone.Syphon.serialize(self);
+        this.model.set(householdContactData);
+        
+        if (this.model.isValid(true)) {
+            isFormComplete = true;
+        } 
 
         //console.log('address ', JSON.stringify(self.model));
         //console.log('data: ', JSON.stringify(data));
         //console.log('App.user.login', App.user.credentials.username);
 
         var _profiles = accountProfiles.toJSON();
-        data = {"householdContact": data, "profiles": _profiles};
-        console.log('data: ', JSON.stringify(data));
+        var data = {"householdContact": householdContactData, "profiles": _profiles};
 
-        self.model.save(data, {
-          silent: false,
-          sync: true,
-          success:function(model, resp, opt){
-            console.log(' ---------------------- success', resp);
+        if (isFormComplete) {
+          console.log('data: ', JSON.stringify(data));
+          self.model.save(data, {
+            silent: false,
+            sync: true,
+            success:function(model, resp, opt){
+              console.log(' ---------------------- success', resp);
 
-            for (var i = 0; i < accountProfiles.length; i++) {
-              var prof = accountProfiles.at(i);
-              if(prof.isValidUserProfile()) {
-                var firstName = prof.get('firstName');
-                var lastName = prof.get('lastName');
-                prof.set('houseHoldProfileId', self.model.get('id'));
-                prof.set('year', '2015-2016');
-                prof.save();
-                console.log(firstName + ', ' + lastName);
-              }
-            } //  end of for(var i=0; i<studentProfiles.length; i++)
+              for (var i = 0; i < accountProfiles.length; i++) {
+                var prof = accountProfiles.at(i);
+                if(prof.isValidUserProfile()) {
+                  var firstName = prof.get('firstName');
+                  var lastName = prof.get('lastName');
+                  prof.set('houseHoldProfileId', self.model.get('id'));
+                  prof.set('year', '2015-2016');
+                  prof.save();
+                  console.log(firstName + ', ' + lastName);
+                }
+              } //  end of for(var i=0; i<studentProfiles.length; i++)
 
-          }, error:function(model, resp, opt){
-            console.log(' ---------------------- error', resp);
-          }, wait:true
-        });
+            }, error:function(model, resp, opt){
+              console.log(' ---------------------- error', resp);
+            }, wait:true
+          });
+        }
         // App.vent.trigger('registration:address:submit', data);
         
-        console.log('saved address ', JSON.stringify(self.model));
+        //console.log('saved address ', JSON.stringify(self.model));
 
-        if(!self.model && !accountProfiles) self.model.set('profiles', accountProfiles);
-        else console.log('profile is null');
+        /*if(!self.model && !accountProfiles) self.model.set('profiles', accountProfiles);
+        else console.log('profile is null');*/
 
-        console.log('onBeforeShow: ', self.model);
+        //console.log('onBeforeShow: ', self.model);
         // console.log('url ', data.urlRoot());
 
       }, this);
