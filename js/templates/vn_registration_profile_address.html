@@ -35,7 +35,7 @@
 		<div class="gutter"></div>
 		<div class="form-group">
 			<div class="col-sm-3">
-				<input id="zipcode" class="form-control registration-page-zip" placeholder="Postal Code" name="zipcode" type="text" value="<%= zipcode %>">
+				<input id="zipcode" class="form-control registration-page-zip" placeholder="Postal Code" name="zipcode" type="text" value="<%= zipcode %>" maxLength=5>
 				<span class="help-block registration-page-zip hidden">
 			</div>
 		</div>
@@ -43,36 +43,67 @@
 	<div class="form-row form-group-lg">
 		<div class="form-group">
 			<div class="col-sm-4">
-				<input id="primaryPhoneNbr" class="form-control registration-page-phone" placeholder="Primary Phone Number" name="primaryPhoneNbr" type="text" value="<%= primaryPhoneNbr %>">
+				<input id="primaryPhoneNbr" class="form-control registration-page-phone" placeholder="Primary Phone Number" name="primaryPhoneNbr" type="text" value="<%= primaryPhoneNbr %>" maxLength=9>
 				<span class="help-block registration-page-phone hidden">
 			</div>
 		</div>
 		<div class="gutter"></div>
 		<div class="form-group">
 			<div class="col-sm-4">
-				<!-- <input id="primaryPhoneType" class="form-row registration-page-phone-type" placeholder="Primary Phone Type" name="primaryPhoneType" type="text" value="<%= primaryPhoneNbr %>"> -->
 				<select class="form-control registration-page-phone-type required" id="primaryPhoneType" name="primaryPhoneType">
 					<option value="">Select One</option>
 					<option value="home_phone">Home Phone</option>
 					<option value="mobile_phone">Mobile Phone</option>
-					<option value="work_phone">Work Phone</option>
+					<option value="mobile_text">Mobile Text</option>
 				</select>
 				<span class="help-block registration-page-phone-type hidden">
 			</div>
 		</div>
 		<div class="gutter"></div>
-		<div class="col-sm-4">
-			<input id="secondaryPhoneNbr" class="form-control registration-page-phone" placeholder="Secondary Phone Number" name="secondaryPhoneNbr" type="text" value="<%= secondaryPhoneNbr %>">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<input id="primaryEmail" class="form-control registration-page-email" placeholder="Primary Email" name="primaryEmail" type="text" value="<%= primaryEmail %>">
+				<span class="help-block registration-page-email hidden">
+			</div>
+		</div>
+		<div class="gutter"></div>
+		<div class="form-group">
+			<div class="col-sm-4">
+				<select class="form-control registration-page-contact-method required" id="contactMethod" name="contactMethod">
+					<option value="">Contact Method</option>
+					<option value="contact_phone">Phone</option>
+					<option value="contact_email">Email</option>
+					<option value="contact_text">Text</option>
+				</select>
+				<span class="help-block registration-page-contact-method hidden">
+			</div>
+		</div>
+	</div>
+	<div class="form-row form-group-lg">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<input id="secondaryPhoneNbr" class="form-control registration-page-phone" placeholder="Secondary Phone Number" name="secondaryPhoneNbr" type="text" value="<%= secondaryPhoneNbr %>" maxLength=9>
+				<span class="help-block registration-page-phone hidden">
+			</div>
 		</div>
 		<div class="gutter"></div>
 		<div class="col-sm-4">
-			<!-- <input id="secondaryPhoneType" class="form-row registration-page-phone-type" placeholder="Secondary Phone Type" name="secondaryPhoneType" type="text" value="<%= secondaryPhoneNbr %>"> -->
 			<select class="form-control registration-page-phone-type required" id="secondaryPhoneType" name="secondaryPhoneType">
 				<option value="">Select One</option>
 				<option value="home_phone">Home Phone</option>
 				<option value="mobile_phone">Mobile Phone</option>
-				<option value="work_phone">Work Phone</option>
+				<option value="mobile_text">Mobile Text</option>
 			</select>
+		</div>
+		<div class="gutter"></div>
+		<div class="form-group">
+			<div class="col-sm-4">
+				<input id="secondaryEmail" class="form-control registration-page-email" placeholder="Secondary Email" name="secondaryEmail" type="text" value="<%= secondaryEmail %>">
+				<span class="help-block registration-page-email hidden">
+			</div>
+		</div>
+		<div class="gutter"></div>
+		<div class="col-sm-4">
 		</div>
 	</div>
 

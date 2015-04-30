@@ -15,7 +15,10 @@ define([
 		primaryPhoneNbr : '',
 		primaryPhoneType : '',
 		secondaryPhoneNbr : '',
-		secondaryPhoneType : ''
+		secondaryPhoneType : '',
+		primaryEmail : '',
+		secondaryEmail : '',
+		contactMethod : ''
 
 		// ,profiles:[]
 	},
@@ -50,15 +53,39 @@ define([
 	    },
 	    zipcode: {
 	      required: true,
+	      length: 5,
+	      pattern: 'digits',
 	      msg: 'Please enter a valid zip code'
 	    },
 	    primaryPhoneNbr: {
 	      required: true,
+	      length: 9,
+	      pattern: 'digits',
 	      msg: 'Please enter a valid phone number'
 	    },
 	    primaryPhoneType: {
 	      required: true,
 	      msg: 'Please select a valid phone type'
+	    },
+	    secondaryPhoneNbr: {
+	      required: false,
+	      length: 9,
+	      pattern: 'digits',
+	      msg: 'Please enter a valid phone number'
+	    },
+	    primaryEmail: {
+	      required: true,
+	      pattern: 'email',
+	      msg: 'Please enter a valid email'
+	    },
+	    secondaryEmail: {
+	      required: false,
+	      pattern: 'email',
+	      msg: 'Please enter a valid email'
+	    },
+	    contactMethod: {
+	      required: true,
+	      msg: 'Please select a valid contact method'
 	    }
 	}
 	// validate : function(attrs, options) {

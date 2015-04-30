@@ -14,7 +14,6 @@ define([
 			lastName : '',
 			dob : '',
 			gender : '',
-			email : '',
 			memberType : '',
 			grade:'',
 			paid:'',

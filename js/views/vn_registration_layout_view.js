@@ -50,6 +50,7 @@ define([
 
       var gradeArray = [ ["Select One", ""], [ "Kindergarten", "K" ], [ "1A", "1A" ], [ "1B", "1B" ], [ "1C", "1C" ], [ "2A", "2A" ] ];
       var memberTypeArray = [ [ "Parent/Guardian", "parent_guardian" ], [ "Student", "student"] ];
+      var genderArray = [ [ "Male", "male" ], [ "Female", "female"] ];
       var paidArray = [ [ "Not Paid", "notpaid" ], [ "Paid", "paid"] ];
       var paidCell = Backgrid.Extension.ObjectCell.extend({
         formatter: {
@@ -68,9 +69,12 @@ define([
         },
         schema: [
           {name: "schoolFee", label: "School Fee"},
+          {name: "reducedFee", label: "Reduced Fee"},
+          {name: "amountPaid", label: "Amount Paid"},
           {name: "donation", label: "Donation"},
           {name: "suggestedGrade", label: "Sug. Grade"},
-          {name: "startDate", label: "Start Date"}
+          {name: "startDate", label: "Start Date"},
+          {name: "notes", label: "Notes"}
         ]
       });
       var columns = [
@@ -101,22 +105,22 @@ define([
             cell : "string",
             label : "DOB"
           },
-          // {
-          //   name : "gender",
-          //   cell : Backgrid.SelectCell.extend({
-          //     optionValues : [ [ "Male", "m" ], [ "Female", "f" ] ]
-          //   }),
-          //   label : "Gender"
-          // },
+          {
+            name : "gender",
+            cell : Backgrid.SelectCell.extend({
+              optionValues : genderArray
+            }),
+            label : "Gender"
+          },
           // {
           //   name : "phoneNbr",
           //   cell : "string",
           //   label : "Phone Number"
           // },
           {
-            name : "email",
+            name : "studentId",
             cell : "string",
-            label : "Email"
+            label : "Student ID"
           },
           {
             name : "memberType",

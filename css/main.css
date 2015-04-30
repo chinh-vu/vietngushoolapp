@@ -46,6 +46,11 @@ legend.registration-page {
   margin-bottom: 5px;
 }
 
+.form-horizontal .control-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 .form-horizontal .form-group {
   vertical-align: top;
 }
@@ -71,6 +76,14 @@ legend.registration-page {
 }
 
 .form-horizontal .registration-page-phone-type {
+  width: 125px;
+}
+
+.form-horizontal .registration-page-email {
+  width: 160px;
+}
+
+.form-horizontal .registration-page-contact-method {
   width: 125px;
 }
 
