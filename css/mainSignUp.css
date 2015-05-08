@@ -1,0 +1,114 @@
+.navbar-inverse .navbar-inner {
+  background-color: #4C0099;
+  background-image: -moz-linear-gradient(top, #6600CC, #4C0099);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6600CC), to(#4C0099));
+  /*background-image: -webkit-linear-gradient(top, #6600CC, #4C0099;*/
+  background-image: -o-linear-gradient(top, #6600CC, #4C0099);
+  background-image: linear-gradient(to bottom, #6600CC, #4C0099);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6600CC', endColorstr='#ff4C0099', GradientType=0);
+}
+
+.sign-up-series p.info {
+  color: #3A87AD;
+}
+
+.sign-up-series .grid-1of1 {
+  width: 95%;
+}
+
+.sign-up-series .grid-1of2 {
+  width: 45%;
+}
+
+.sign-up-series .grid-1of4-large {
+  width: 24%;
+}
+
+.sign-up-series .grid-1of4-small {
+  width: 20%;
+}
+
+.sign-up-series .grid-full {
+  width: 100%;
+}
+
+.sign-up-series .gutter {
+  width: 4%;
+}
+
+.sign-up-series .smallgutter {
+  width: 2%;
+}
+
+.sign-up-series .required-asterisk {
+  font-weight: 700;
+  color: #EE472E;
+  font-size: 0.923em;
+}
+
+.sign-up-series .form-control {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.sign-up-series .required-bg-fill {
+  background-color: #FEF7C6;
+}
+
+.sign-up-series .form-column {
+  vertical-align: top;
+}
+
+.sign-up-series label {
+  cursor: default;
+}
+
+.sign-up-series .btn-primary.active,
+.sign-up-series .btn-warning.active,
+.sign-up-series .btn-danger.active,
+.sign-up-series .btn-success.active,
+.sign-up-series .btn-info.active,
+.sign-up-series .btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sign-up-series .btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #00CC00;
+  /**background-color: #009900;*/
+  background-image: -moz-linear-gradient(top, #00FF00, #009900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00FF00), to(#009900));
+  /*background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);*/
+  background-image: -o-linear-gradient(top, #00FF00, #009900);
+  background-image: linear-gradient(to bottom, #00FF00, #009900);
+  background-repeat: repeat-x;
+  border-color: #009900 #009900 #006600;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00FF00', endColorstr='#ff009900', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.sign-up-series .btn-primary:hover,
+.sign-up-series .btn-primary:focus,
+.sign-up-series .btn-primary:active,
+.sign-up-series .btn-primary.active,
+.sign-up-series .btn-primary.disabled,
+.sign-up-series .btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #009900;
+  /**background-color: #003bb3;*/
+}
+
+.sign-up-series .btn-primary:active,
+.sign-up-series .btn-primary.active {
+  background-color: #003399 \9;
+}
+
+.sign-up-series .btn {
+  font-size: 34px;
+  padding: 20px 30px;
+  margin-top: 20px;
+}
