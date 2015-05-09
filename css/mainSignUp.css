@@ -61,6 +61,10 @@
   vertical-align: top;
 }
 
+.sign-up-series .form-center {
+  text-align: center;
+}
+
 .sign-up-series label {
   cursor: default;
 }
@@ -104,11 +108,17 @@
 
 .sign-up-series .btn-primary:active,
 .sign-up-series .btn-primary.active {
-  background-color: #003399 \9;
+  background-color: #00FF00 \9;
 }
 
 .sign-up-series .btn {
   font-size: 34px;
   padding: 20px 30px;
   margin-top: 20px;
+}
+
+.sign-up-series .has-error .help-block {
+  font-size: 14px;
+  margin-top: -10px;
+  line-height: 20px;
 }

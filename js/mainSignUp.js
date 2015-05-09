@@ -53,12 +53,12 @@ requirejs.config({
 require([
   'appSignUp', 
   'backbone', 
-  'routers/main_router',
+  'routers/routerSignUp',
   'models/user'
   ], 
-  function (AppSignUp, Backbone, Router, User) {
+  function (AppSignUp, Backbone, RouterSignUp, User) {
     "use strict";
 
     AppSignUp.start();
-    new Router();
+    new RouterSignUp();
 });

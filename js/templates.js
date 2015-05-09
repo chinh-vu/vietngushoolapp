@@ -12,6 +12,8 @@ define(function (require){
     // signUp templates
     tplHeaderSignUp              : require('tpl!templates/headerSignUp.html'),
     tplBodySignUp           : require('tpl!templates/bodySignUp.html'),
+    tplAddAccountLayout     : require('tpl!templates/addAccountLayout.html'),
+    tplAddAccount           : require('tpl!templates/addAccount.html'),
     tplBodySignUpAddSpouse  : require('tpl!templates/bodySignUpAddSpouse.html'),
     tplBodySignUpAddStudent  : require('tpl!templates/bodySignUpAddStudent.html'),
     tplBodySignUpAddTuition  : require('tpl!templates/bodySignUpAddTuition.html')
